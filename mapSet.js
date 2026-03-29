@@ -70,4 +70,5 @@ const intersection = new Set (
     [...setA].filter(x => setB.has(x))
 );
 console.log(intersection);
+//DIFFERENCE values in A but not in B
 
