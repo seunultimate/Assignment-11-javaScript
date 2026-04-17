@@ -1,4 +1,5 @@
-const contries ={
+//Parallel vs Sequential
+const contriesClub ={
     England: ["Chelasea", "Manchester", "Liverpool"],
     Spain: ["Barcelona", "Real Madrid", "Atletico Madrid"],
     France: ["PSG", "Inter Milan", "AC Milan"],
@@ -13,17 +14,19 @@ function fetchTeam (Team) {
     })
 }
 
+//Sequential Execution
 async function sequential () {
-    const data1  = await fetchTeam (contries.England[0]);
+    const data1  = await fetchTeam (contriesClub.England[0]);
     console.log(data1);
-    const data2 = await fetchTeam(contries.Spain[2])
+    const data2 = await fetchTeam(contriesClub.Spain[2])
     console.log(data2)
 }
 sequential();
 
+//Parallel Execution
 async function parallel () {
-    const team1 = fetchTeam (contries.Nigeria[2]);
-    const team2 = fetchTeam (contries.France[1]);
+    const team1 = fetchTeam (contriesClub.Nigeria[2]);
+    const team2 = fetchTeam (contriesClub.France[1]);
     const data3 = await team1;
     const data4 = await team2;
     console.log(data3);
