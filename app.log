@@ -1,0 +1,5 @@
+INFO User logged in
+ERROR Database failed
+INFO Payment completed
+ERROR Invalid password
+INFO User updated profile
